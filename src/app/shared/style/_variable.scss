@@ -1,0 +1,26 @@
+$blackCol:rgb(44, 43, 43);
+$whiteCol:rgb(255, 255, 255);
+$greyLight:rgb(209, 205, 205);
+$greyBorder:rgb(107, 105, 105);
+$lightBlue: rgb(145, 192, 231);
+
+%btn{
+    cursor: pointer;
+    border: 2px solid $blackCol;
+    border-radius: 5px;
+    color: $whiteCol;
+    padding: 10px 20px;
+    background-color: $blackCol;
+    font-size: 17px;
+}
+%input{
+    width: 100%;
+    height: 50px;
+    padding: 20px;
+    border: 2px solid $greyLight;
+    border-radius: 5px;
+    margin-bottom: 10px ;
+    outline: none;
+    font-size: 17px;
+    color: $greyBorder;
+}

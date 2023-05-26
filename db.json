@@ -1,0 +1,18 @@
+{
+  "blogs": [
+    {
+      "title": "Title 1",
+      "text": "some text 1",
+      "author": "IVAN",
+      "img": "../../../assets/photo.jpg",
+      "id": 1
+    },
+    {
+      "title": "assfdfd",
+      "text": "dsgfgsgfsddafgsfhshgf",
+      "author": "alex123",
+      "img": "../../../assets/photo.jpg",
+      "id": 2
+    }
+  ]
+}

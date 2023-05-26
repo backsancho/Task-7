@@ -1,0 +1,63 @@
+@import "../../shared/style/base";
+@import "../../shared/style/variable";
+
+.container {
+  width: 100%;
+  margin-top: 130px;
+  display: flex;
+  justify-content: center;
+}
+.adminLogo {
+  width: 10%;
+  &__BTN {
+    width: 95%;
+    height: 50px;
+    margin: 20px 0 0 5%;
+    @extend %btn;
+    font-size: 25px;
+    text-align: start;
+  }
+}
+.admin {
+  width: 80%;
+  padding: 20px 5%;
+  &__form {
+    height: 300px;
+  }
+  &__input {
+    @extend %input;
+  }
+  &__textarea {
+    @extend %input;
+    height: 100px;
+  }
+  &__btn {
+    @extend %btn;
+  }
+  &__btnSave {
+    @extend %btn;
+    background-color: $greyLight;
+    color: $blackCol;
+    border: 1px solid$greyLight;
+  }
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+tr,
+th,
+td {
+  border-bottom: 1px solid $greyLight;
+  padding: 15px;
+  font-size: 18px;
+  text-align: start;
+  font-weight: 900;
+}
+tr:hover td {
+  background-color: $greyLight;
+}
+td {
+  color: $greyBorder;
+  font-weight: 300;
+}

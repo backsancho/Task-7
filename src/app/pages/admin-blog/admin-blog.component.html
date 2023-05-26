@@ -1,0 +1,52 @@
+<div class="container">
+
+  <div class="adminLogo">
+      <button class="adminLogo__BTN">Blogs</button>
+  </div>
+  <div class="admin">
+      <div class="admin__form">
+          <input [(ngModel)]="title" type="text"
+              class="admin__input" placeholder="title here..">
+
+          <textarea [(ngModel)]="text"
+              class="admin__textarea" placeholder="text here.."></textarea>
+          <input [(ngModel)]="author" type="text"
+              class="admin__input" placeholder="author here..">
+
+          <button (click)="addBlogs()" *ngIf="btn"
+              [disabled]="!text||!author||!title"
+              class="admin__btn">add</button>
+
+          <button (click)="saveBlogs()" *ngIf="!btn"
+              [disabled]="!text||!author||!title"
+              class="admin__btnSave">Save edit</button>
+      </div>
+      <table>
+          <thead>
+              <tr>
+                  <th>#</th>
+                  <th>Title</th>
+                  <th>Text</th>
+                  <th>Aythor</th>
+                  <th>Edit</th>
+                  <th>Delite</th>
+              </tr>
+          </thead>
+
+          <tbody>
+              <tr *ngFor="let blog of adminBlogs">
+                  <td>{{blog.id}}</td>
+                  <td>{{blog.title | slice:0:15}}</td>
+                  <td>{{blog.text| slice:0:30}}</td>
+                  <td>{{blog.author | titlecase}}</td>
+
+                  <td><input (click)="editBlog(blog)"
+                          type="button" class="admin__btn" value="Edit"></td>
+                  <td><input (click)="deleteBlog(blog)" [disabled]="!btn"
+                          type="button" class="admin__btn" value="Delete">
+                  </td>
+              </tbody>
+          </table>
+      </div>
+
+  </div>

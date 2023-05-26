@@ -1,0 +1,32 @@
+@import "../../shared/style/base";
+@import "../../shared/style/variable";
+
+.container {
+  width: 95%;
+  margin: 130px auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.blog {
+  width: 400px;
+  min-height: 350px;
+  margin: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  &__img {
+    width: 400px;
+    height: 250px;
+  }
+  &__author {
+    font-size: 16px;
+    font-weight: bolder;
+    letter-spacing: 5px;
+    color: $lightBlue;
+  }
+  &__title {
+    font-size: 20px;
+    font-weight: bolder;
+  }
+}
